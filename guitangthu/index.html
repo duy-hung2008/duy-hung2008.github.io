@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc mừng sinh nhật Thư nhé :>>> </title>
+    <link rel="stylesheet" href="canvas.css" />
+    <link rel="stylesheet" href="present.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="password-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+      <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2>Mật khẩu là ngày sinh nhật của bn </h2>
+        <input 
+          type="password" 
+          id="password-input" 
+          placeholder="VD: ??/??/????" 
+          style="padding: 10px; font-size: 16px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; width: 80%;">
+        <br />
+        <button 
+          onclick="validatePassword()" 
+          style="padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          Xác nhận
+        </button>
+        <p id="error-message" style="color: red; margin-top: 10px; display: none;">Tới ngày sinh của mình còn nhập sai nữa à, nhập lại đi </p>
+      </div>
+    </div>
+
+    <div class="parent" style="display: none;">
+      <canvas id="canvas"></canvas>
+      <section class="above-fold">
+        <div class="wrap-present">
+          <div class="present-box" id="present">
+            <div class="present">
+              <div class="img-wrap" id="present-image"></div>
+            </div>
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top">
+              <span class="to">
+                <span class="name" id="nametag"> </span>
+              </span>
+            </div>
+            <div class="side bottom"></div>
+          </div>
+        </div>
+        <p class="info-text">Click to Open</p>
+      </section>
+
+      <div id="card">
+        <h4 class="title-card"> Tặng Thư </h4>
+
+        <img
+          src="thu.png"
+          class="honey"
+        />
+
+        <h4 class="content-card">
+          Chúc mừng sinh nhật Thư nhé! 💐
+          Chúc Thư sang tuổi mới sẽ xinh đẹp hơn, học giỏi hơn và sẽ luôn có những điều may mắn với những điều tốt đẹp nhất tới với Thư nhé !
+          BÀI THƠ TẶNG THƯ
+          Hôm nay sinh nhật bạn
+          Tớ chẳng có quà đâu
+          Chỉ có tấm thiệp màu
+          Làm quà thay lời chúc.
+          Chúc cho bạn hạnh phúc
+          Thêm tuổi mới bình yên
+          Và có thật nhiều tiền
+          Cùng thành công rực rỡ.
+          Chúc cho bạn sinh nhật vui vẻ
+          Cùng gia đình khe khẽ cười vang
+          Nhất là được cùng với nàng
+          Nắm tay dạo phố rộn ràng cười vui
+          Và chúc bạn đẩy lùi buồn khổ
+          Niềm tin thì tuôn sổ không thôi
+          Để cho bạn mãi yêu đời
+          Không còn sầu nhớ một thời đã qua.
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+        </h4>
+      </div>
+    </div>
+    <audio autoplay loop  id="playAudio" style="display: none;">
+      <source src="cmsn.mp3">
+    </audio>
+  </body>
+  <script src="config.js"></script>
+  <script src="canvas.js"></script>
+  <script src="present.js"></script>
+  <script>
+    const correctPassword = "17/02/2010";
+
+    function validatePassword() {
+      const input = document.getElementById("password-input").value;
+      if (input === correctPassword) {
+        document.getElementById("password-modal").style.display = "none";
+        document.querySelector(".parent").style.display = "block";
+        document.getElementById("playAudio").style.display = "block";
+      } else {
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = "block";
+      }
+    }
+  </script>
+</html>
