@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8/3 vui vẻ nhaanhaa :>>> </title>
+    <link rel="stylesheet" href="canvas.css" />
+    <link rel="stylesheet" href="present.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div id="password-modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+      <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2>Mật khẩu là ngày sinh nhật của bn </h2>
+        <input 
+          type="password" 
+          id="password-input" 
+          placeholder="VD: ??/??/????" 
+          style="padding: 10px; font-size: 16px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; width: 80%;">
+        <br />
+        <button 
+          onclick="validatePassword()" 
+          style="padding: 10px 20px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          Xác nhận
+        </button>
+        <p id="error-message" style="color: red; margin-top: 10px; display: none;">Nhận lại ik nekkkk bé NhiNhi </p>
+      </div>
+    </div>
+
+    <div class="parent" style="display: none;">
+      <canvas id="canvas"></canvas>
+      <section class="above-fold">
+        <div class="wrap-present">
+          <div class="present-box" id="present">
+            <div class="present">
+              <div class="img-wrap" id="present-image"></div>
+            </div>
+            <div class="side front"></div>
+            <div class="side back"></div>
+            <div class="side left"></div>
+            <div class="side right"></div>
+            <div class="side top">
+              <span class="to">
+                <span class="name" id="nametag"> </span>
+              </span>
+            </div>
+            <div class="side bottom"></div>
+          </div>
+        </div>
+        <p class="info-text">Click to Open</p>
+      </section>
+
+      <div id="card">
+        <h4 class="title-card"> Tặng NhiNhi </h4>
+
+        <img
+          src="nhi.png"
+          class="honey"
+        />
+
+        <h4 class="content-card">
+          ôm nay là 8/3 là ngày của em. Nhi à chúng ta yêu xa nên hiện tại cx ko trực tiếp đưa qua cho e được nên e thông cảm ở điều này. Vì ko đưa được quà nên ah đã nghĩ ra cái này để lm cho em. Nhân dịp 8/3 anh chúc e ngày càng xinh đẹp, ngày càng học giỏi, những điều may mắn nhắt sẽ tới với e và tất cả nỗi buồn của e sẽ biến mất nhaaaa. IU EM NHÌU LẮM NEKKKK
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+          </head>
+          <body>
+            
+          </body>
+          </html>
+        </h4>
+      </div>
+    </div>
+    <audio autoplay loop  id="playAudio" style="display: none;">
+      <source src="namchattayanhnhenamchattayanhnhe.mp3">
+    </audio>
+  </body>
+  <script src="config.js"></script>
+  <script src="canvas.js"></script>
+  <script src="present.js"></script>
+  <script>
+    const correctPassword = "01/04/2011";
+
+    function validatePassword() {
+      const input = document.getElementById("password-input").value;
+      if (input === correctPassword) {
+        document.getElementById("password-modal").style.display = "none";
+        document.querySelector(".parent").style.display = "block";
+        document.getElementById("playAudio").style.display = "block";
+      } else {
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.style.display = "block";
+      }
+    }
+  </script>
+</html>
